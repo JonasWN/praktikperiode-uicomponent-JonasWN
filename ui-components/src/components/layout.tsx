@@ -24,8 +24,9 @@ class Template extends React.Component {
 }
 
 const Container = styled.div`
-  max-width: 1080px;
+  max-width: 780px;
   margin: 0 auto;
+  padding: 30px 0;
 `
 
 export default Template

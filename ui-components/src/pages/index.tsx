@@ -2,18 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
+import Card from '../components/Card'
 
 const RootIndex = ({ data }: any) => {
   const title = data.allContentfulProduct.edges
   return (
     <Layout>
-      <header>
-        {title.map(({ node }: any) => (
-          <Title>{node.productName.productName}</Title>
-        ))}
-      </header>
-      <main>Main</main>
-      <footer>Footer</footer>
+      <main>
+        <Card />
+      </main>
     </Layout>
   )
 }
