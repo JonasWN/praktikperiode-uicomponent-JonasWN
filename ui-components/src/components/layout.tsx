@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Container from './container'
+import GlobalStyle from './GlobalStyle'
+import styled from 'styled-components'
 
 class Template extends React.Component {
   render() {
@@ -14,8 +14,18 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    return <Container>{children}</Container>
+    return (
+      <Container>
+        <GlobalStyle></GlobalStyle>
+        {children}
+      </Container>
+    )
   }
 }
+
+const Container = styled.div`
+  max-width: 1080px;
+  margin: 0 auto;
+`
 
 export default Template

@@ -1,15 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import Layout from '../components/layout'
-
-const Title = styled.h1`
-  color: blue;
-  text-align: center;
-  font-weight: bold;
-`
+import Layout from '../components/Layout'
 
 const RootIndex = ({ data }: any) => {
   const title = data.allContentfulProduct.edges
@@ -51,4 +43,10 @@ export const pageQuery = graphql`
       }
     }
   }
+`
+
+const Title = styled.h1`
+  color: blue;
+  text-align: center;
+  font-weight: bold;
 `
