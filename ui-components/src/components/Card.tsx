@@ -2,6 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { shadow } from './GlobalStyle'
+
+interface Icard {
+  catagory: string
+  content: string
+  title: string
+  image: {
+    fluid: {
+      aspectRatio: number
+      sizes: string
+      src: string
+      srcSet: string
+    }
+  }
+}
 
 const Card: React.FC = () => {
   const { allContentfulCard } = useStaticQuery(
@@ -13,7 +28,7 @@ const Card: React.FC = () => {
             content
             title
             image {
-              fluid {
+              fluid(maxWidth: 400, maxHeight: 500) {
                 ...GatsbyContentfulFluid_tracedSVG
               }
             }
@@ -25,18 +40,16 @@ const Card: React.FC = () => {
 
   return (
     <>
-      {allContentfulCard.nodes.map((card: any) => {
-        return (
-          <StyledCard>
-            <Img fluid={card.image.fluid} className="card-image" />
-            <div>
-              <h3>{card.catagory}</h3>
-              <h2>{card.title}</h2>
-              <p>{card.content}</p>
-            </div>
-          </StyledCard>
-        )
-      })}
+      {allContentfulCard.nodes.map((card: Icard) => (
+        <StyledCard key={card.title}>
+          <Img fluid={card.image.fluid} className="card-image" />
+          <div>
+            <h3>{card.catagory}</h3>
+            <h2>{card.title}</h2>
+            <p>{card.content}</p>
+          </div>
+        </StyledCard>
+      ))}
     </>
   )
 }
@@ -48,9 +61,7 @@ const StyledCard = styled.article`
 
   border-radius: 15px;
 
-  box-shadow: 6px 4px 29px 1px rgba(212, 211, 211, 0.76);
-  -webkit-box-shadow: 6px 4px 29px 1px rgba(212, 211, 211, 0.76);
-  -moz-box-shadow: 6px 4px 29px 1px rgba(212, 211, 211, 0.76);
+  box-shadow: ${shadow.sm};
 
   :hover {
     cursor: pointer;
@@ -70,10 +81,10 @@ const StyledCard = styled.article`
 
     height: 50%;
 
-    padding: 20px;
+    padding: 10%;
     h3 {
       font-size: 0.75em;
-      font-weight: 400;
+      font-weight: 500;
       text-transform: uppercase;
     }
     h2 {

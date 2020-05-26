@@ -47,4 +47,9 @@ display: block;
 }
 `
 
+export const shadow = {
+  sm: '6px 4px 29px 1px rgba(212, 211, 211, 0.76)',
+  lg: '6px 4px 29px 1px rgba(100, 100, 100, 0.76)',
+}
+
 export default GlobalStyle
