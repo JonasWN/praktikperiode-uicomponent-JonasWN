@@ -28,7 +28,7 @@ const Card: React.FC = () => {
             content
             title
             image {
-              fluid(maxWidth: 400, maxHeight: 500) {
+              fluid(maxWidth: 400, maxHeight: 500, toFormat: NO_CHANGE) {
                 ...GatsbyContentfulFluid_tracedSVG
               }
             }

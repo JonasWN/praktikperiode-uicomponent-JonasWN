@@ -5,9 +5,7 @@ import Card from '../components/Card'
 const RootIndex = () => {
   return (
     <Layout>
-      <main>
-        <Card />
-      </main>
+      <Card />
     </Layout>
   )
 }
