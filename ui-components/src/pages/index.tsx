@@ -11,11 +11,14 @@ const Title = styled.h1`
   font-weight: bold;
 `
 
-const RootIndex = () => {
+const RootIndex = ({ data }: any) => {
+  const title = data.allContentfulProduct.edges
   return (
     <Layout>
       <header>
-        <Title>Hello</Title>
+        {title.map(({ node }: any) => (
+          <Title>{node.productName.productName}</Title>
+        ))}
       </header>
       <main>Main</main>
       <footer>Footer</footer>
@@ -32,44 +35,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulProduct {
       edges {
         node {
-          title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
+          productName {
+            productName
           }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
+          image {
+            fluid {
+              src
             }
           }
         }

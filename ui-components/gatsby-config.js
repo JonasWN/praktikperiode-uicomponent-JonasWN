@@ -21,7 +21,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'UI-Components-Jwn',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
