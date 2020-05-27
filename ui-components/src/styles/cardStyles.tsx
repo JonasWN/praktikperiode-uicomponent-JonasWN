@@ -1,19 +1,18 @@
 import styled from 'styled-components'
-import { shadow, border } from './globalStyles'
+import { shadow, border, bg } from './globalStyles'
 
 export const StyledCard = styled.article`
+  flex: 2;
   width: 300px;
   height: 420px;
-  background: #fff;
-
+  background: ${bg.component};
   border-radius: ${border.rounded};
-
   box-shadow: ${shadow.sm};
 
   .card-image {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    filter: contrast(1.2);
+    border-top-right-radius: ${border.rounded};
+    border-top-left-radius: ${border.rounded};
+    filter: hue-rotate(200deg);
   }
 
   div {

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { shadow, border } from './globalStyles'
+import { shadow, border, bg } from './globalStyles'
 
 const StyledLeisure = styled.section`
   display: flex;
-  width: 80%;
+  flex: 50%;
   height: 420px;
-  background: #fff;
+  background: ${bg.component};
   border-radius: 15px;
   box-shadow: ${shadow.sm};
   padding: 5%;
@@ -57,6 +57,10 @@ const StyledLeisure = styled.section`
       display: flex;
       justify-content: space-between;
       width: 100%;
+
+      img {
+        max-width: 30%;
+      }
     }
   }
 `
