@@ -34,6 +34,7 @@ body {
   scroll-behavior: smooth;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #dce0ff5e;
 }
 
 ul,
