@@ -7,14 +7,14 @@ interface Icard {
   catagory: string
   content: string
   title: string
-  // image: {
-  //   fluid: {
-  //     aspectRatio: number
-  //     sizes: string
-  //     src: string
-  //     srcSet: string
-  //   }
-  // }
+  image: {
+    fluid: {
+      aspectRatio: number
+      sizes: string
+      src: string
+      srcSet: string
+    }
+  }
 }
 
 const Card: React.FC = () => {
@@ -26,6 +26,11 @@ const Card: React.FC = () => {
             catagory
             content
             title
+            image {
+              fluid(maxWidth: 400, maxHeight: 500) {
+                ...GatsbyContentfulFluid_tracedSVG
+              }
+            }
           }
         }
       }
@@ -36,7 +41,7 @@ const Card: React.FC = () => {
     <>
       {allContentfulCard.nodes.map((card: Icard) => (
         <StyledCard key={card.title}>
-          {/* <Img fluid={card.image.fluid} className="card-image" /> */}
+          <Img fluid={card.image.fluid} className="card-image" />
           <div>
             <h3>{card.catagory}</h3>
             <h2>{card.title}</h2>
@@ -49,11 +54,3 @@ const Card: React.FC = () => {
 }
 
 export default Card
-
-// img query
-
-// image {
-//   fluid(maxWidth: 400, maxHeight: 500, toFormat: NO_CHANGE) {
-//     ...GatsbyContentfulFluid_tracedSVG
-//   }
-// }
