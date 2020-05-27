@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { shadow } from './globalStyles'
+import { shadow, border } from './globalStyles'
 
 export const StyledCard = styled.article`
   width: 300px;
   height: 420px;
   background: #fff;
 
-  border-radius: 15px;
+  border-radius: ${border.rounded};
 
   box-shadow: ${shadow.sm};
 
