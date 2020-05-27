@@ -1,6 +1,6 @@
 import React from 'react'
-import GlobalStyle from './GlobalStyle'
-import styled from 'styled-components'
+import GlobalStyle from '../styles/reset-css'
+import { Container } from '../styles/globalStyles'
 
 const Layout = ({ children }: any) => {
   return (
@@ -10,11 +10,5 @@ const Layout = ({ children }: any) => {
     </Container>
   )
 }
-
-const Container = styled.div`
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 30px 0;
-`
 
 export default Layout
