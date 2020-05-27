@@ -23,7 +23,7 @@ module.exports = {
   siteMetadata: {
     title: 'UI-Components-Jwn',
   },
-  pathPrefix: '/gatsby-contentful-starter',
+  pathPrefix: '/ui-components',
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
