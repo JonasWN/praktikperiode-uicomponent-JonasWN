@@ -1,17 +1,16 @@
 import styled from 'styled-components'
-import { shadow, border, bg } from './globalStyles'
 
 export const StyledCard = styled.article`
   flex: 2;
   width: 300px;
   height: 420px;
-  background: ${bg.component};
-  border-radius: ${border.rounded};
-  box-shadow: ${shadow.sm};
+  background: ${(props) => props.theme.colors.componentBG};
+  border-radius: ${(props) => props.theme.border.rounded};
+  box-shadow: ${(props) => props.theme.shadow.sm};
 
   .card-image {
-    border-top-right-radius: ${border.rounded};
-    border-top-left-radius: ${border.rounded};
+    border-top-right-radius: ${(props) => props.theme.border.rounded};
+    border-top-left-radius: ${(props) => props.theme.border.rounded};
     filter: hue-rotate(200deg);
   }
 
@@ -34,10 +33,6 @@ export const StyledCard = styled.article`
     }
     p {
       font-weight: 300;
-    }
-
-    :hover {
-      cursor: pointer;
     }
   }
 `

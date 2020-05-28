@@ -1,18 +1,18 @@
 import styled from 'styled-components'
-import { shadow, border, bg } from './globalStyles'
+import { gridSpecs } from '../styles/layoutStyles'
 
 const StyledLeisure = styled.section`
   display: flex;
-  flex: 50%;
+  grid-column-end: ${gridSpecs.spanCol.md};
   height: 420px;
-  background: ${bg.component};
+  background: ${(props) => props.theme.colors.componentBG};
   border-radius: 15px;
-  box-shadow: ${shadow.sm};
+  box-shadow: ${(props) => props.theme.shadow.sm};
   padding: 5%;
 
   img {
-    border-radius: ${border.rounded};
-    box-shadow: ${shadow.sm};
+    border-radius: ${(props) => props.theme.border.rounded};
+    box-shadow: ${(props) => props.theme.shadow.sm};
   }
 
   article {
@@ -25,9 +25,9 @@ const StyledLeisure = styled.section`
       align-self: flex-end;
       width: 120px;
       height: 35px;
-      border-radius: ${border.pill};
+      border-radius: ${(props) => props.theme.border.pill};
       border: none;
-      box-shadow: ${shadow.btn};
+      box-shadow: ${(props) => props.theme.shadow.btn};
       background: linear-gradient(135deg, #0072ff, #259bff);
       color: #fcfcfc;
 
