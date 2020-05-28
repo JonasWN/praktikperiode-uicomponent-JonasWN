@@ -34,7 +34,7 @@ export const gridSpecs = {
 
 export const FlexibleGrid = styled.main`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8.3%, 1fr));
   grid-gap: ${gridSpecs.gap.md};
 
   > * {

@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 
 export const StyledCard = styled.article`
-  flex: 2;
-  width: 300px;
   height: 420px;
+  grid-column-end: span 3;
   background: ${(props) => props.theme.colors.componentBG};
-  border-radius: ${(props) => props.theme.border.rounded};
+  border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
 
   .card-image {
-    border-top-right-radius: ${(props) => props.theme.border.rounded};
-    border-top-left-radius: ${(props) => props.theme.border.rounded};
+    border-top-right-radius: ${(props) => props.theme.border.full};
+    border-top-left-radius: ${(props) => props.theme.border.full};
     filter: hue-rotate(200deg);
   }
 
