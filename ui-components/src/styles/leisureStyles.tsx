@@ -3,15 +3,15 @@ import { gridSpecs } from '../styles/layoutStyles'
 
 const StyledLeisure = styled.section`
   display: flex;
-  grid-column-end: ${gridSpecs.spanCol.md};
+  grid-column-end: span 5;
   height: 420px;
   background: ${(props) => props.theme.colors.componentBG};
-  border-radius: 15px;
+  border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
   padding: 5%;
 
   img {
-    border-radius: ${(props) => props.theme.border.rounded};
+    border-radius: ${(props) => props.theme.border.full};
     box-shadow: ${(props) => props.theme.shadow.sm};
   }
 
@@ -28,7 +28,7 @@ const StyledLeisure = styled.section`
       border-radius: ${(props) => props.theme.border.pill};
       border: none;
       box-shadow: ${(props) => props.theme.shadow.btn};
-      background: linear-gradient(135deg, #0072ff, #259bff);
+      background: ${(props) => props.theme.colors.gradientBlue};
       color: #fcfcfc;
 
       &:hover {
