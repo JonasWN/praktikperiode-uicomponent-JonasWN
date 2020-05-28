@@ -26,10 +26,9 @@ const Card: React.FC = () => {
             catagory
             content
             title
-
             image {
               fluid(maxWidth: 400, maxHeight: 500) {
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid
               }
             }
           }
