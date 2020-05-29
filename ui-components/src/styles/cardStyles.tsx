@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledCard = styled.article`
   height: 420px;
-  grid-column-end: span 3;
+  grid-column-end: span 4;
   background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};

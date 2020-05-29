@@ -4,7 +4,10 @@ import StyledLeisure from '../styles/leisureStyles'
 const Leisure = () => {
   return (
     <StyledLeisure>
-      <img src="https://place-hold.it/200x300" alt="leisure-gallery" />
+      <img
+        src="https://dummyimage.com/200x400/2c3e50/f2f2f7.jpg&text=Placeholder"
+        alt="leisure-gallery"
+      />
       <article>
         <button>Leisure</button>
         <h2>
@@ -18,9 +21,18 @@ const Leisure = () => {
           asperiores atque?
         </p>
         <div>
-          <img src="https://place-hold.it/100x100" alt="leisure-gallery" />
-          <img src="https://place-hold.it/100x100" alt="leisure-gallery" />
-          <img src="https://place-hold.it/100x100" alt="leisure-gallery" />
+          <img
+            src="https://dummyimage.com/100x100/2c3e50/f2f2f7.jpg&text=Placeholder"
+            alt="leisure-gallery"
+          />
+          <img
+            src="https://dummyimage.com/100x100/2c3e50/f2f2f7.jpg&text=Placeholder"
+            alt="leisure-gallery"
+          />
+          <img
+            src="https://dummyimage.com/100x100/2c3e50/f2f2f7.jpg&text=Placeholder"
+            alt="leisure-gallery"
+          />
         </div>
       </article>
     </StyledLeisure>
