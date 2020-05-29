@@ -4,7 +4,7 @@ import Card from '../components/Card'
 import Leisure from '../components/Leisure'
 import Perk from '../components/Perk'
 import Collection from '../components/Collection'
-import NewsSlide from '../components/NewsSlide'
+import NewSlide from '../components/NewSlide'
 import { Title, FlexibleGrid } from '../styles/layoutStyles'
 
 const RootIndex = () => {
@@ -21,7 +21,7 @@ const RootIndex = () => {
         <Collection />
         <Collection />
         <Collection />
-        <NewsSlide />
+        <NewSlide />
       </FlexibleGrid>
     </Layout>
   )
