@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Card from '../components/Card'
 import Leisure from '../components/Leisure'
 import Perk from '../components/Perk'
+import Collection from '../components/Collection'
 
 const RootIndex = () => {
   return (
@@ -13,6 +14,9 @@ const RootIndex = () => {
       <Perk />
       <Perk />
       <Perk />
+      <Collection />
+      <Collection />
+      <Collection />
     </Layout>
   )
 }

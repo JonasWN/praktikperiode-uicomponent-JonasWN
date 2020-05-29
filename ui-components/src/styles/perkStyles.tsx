@@ -6,8 +6,8 @@ const StyledPerk = styled.div`
   justify-content: space-between;
   height: 270px;
   padding: 10%;
-  grid-column-end: span 2;
-  color: #fff;
+  grid-column-end: span 3;
+  color: ${(props) => props.theme.colors.lightFont};
   background: ${(props) => props.theme.colors.gradientBlue};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};

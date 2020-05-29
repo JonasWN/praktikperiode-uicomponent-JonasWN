@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import { gridSpecs } from '../styles/layoutStyles'
 
 const StyledLeisure = styled.section`
   display: flex;
-  grid-column-end: span 5;
+  grid-column-end: span 8;
   height: 420px;
   background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
@@ -12,7 +11,7 @@ const StyledLeisure = styled.section`
 
   img {
     border-radius: ${(props) => props.theme.border.full};
-    box-shadow: ${(props) => props.theme.shadow.sm};
+    box-shadow: ${(props) => props.theme.shadow.img};
   }
 
   article {
@@ -29,7 +28,7 @@ const StyledLeisure = styled.section`
       border: none;
       box-shadow: ${(props) => props.theme.shadow.btn};
       background: ${(props) => props.theme.colors.gradientBlue};
-      color: #fcfcfc;
+      color: ${(props) => props.theme.colors.lightFont};
 
       &:hover {
         cursor: pointer;

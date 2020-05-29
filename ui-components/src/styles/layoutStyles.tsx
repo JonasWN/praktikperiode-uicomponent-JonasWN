@@ -34,8 +34,13 @@ export const gridSpecs = {
 
 export const FlexibleGrid = styled.main`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8.3%, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: ${gridSpecs.gap.md};
+  padding: 4%;
+  background: #e0f1ff;
+  color: ${(props) => props.theme.colors.darkFont};
+  border-radius: ${(props) => props.theme.border.full};
+  box-shadow: ${(props) => props.theme.shadow.sm};
 
   > * {
     cursor: default;
