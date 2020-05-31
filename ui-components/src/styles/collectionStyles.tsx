@@ -5,6 +5,7 @@ const StyledCollection = styled.article`
   flex-direction: column;
   height: 375px;
   grid-column-end: span 4;
+  background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
 
@@ -39,7 +40,6 @@ const StyledCollection = styled.article`
       height: 55px;
       width: 55px;
       border-radius: ${(props) => props.theme.border.circle};
-      border: 1px solid #c3c3c3;
     }
     h3 {
       font-weight: 500;

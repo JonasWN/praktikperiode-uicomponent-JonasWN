@@ -4,19 +4,25 @@ import Card from '../components/Card'
 import Leisure from '../components/Leisure'
 import Perk from '../components/Perk'
 import Collection from '../components/Collection'
+import NewSlide from '../components/NewSlide'
+import { Title, FlexibleGrid } from '../styles/layoutStyles'
 
 const RootIndex = () => {
   return (
     <Layout>
-      <Card />
-      <Leisure />
-      <Perk />
-      <Perk />
-      <Perk />
-      <Perk />
-      <Collection />
-      <Collection />
-      <Collection />
+      <Title>Gatsby-Contentful Blog Components</Title>
+      <FlexibleGrid>
+        <Card />
+        <Leisure />
+        <Perk />
+        <Perk />
+        <Perk />
+        <Perk />
+        <Collection />
+        <Collection />
+        <Collection />
+        <NewSlide />
+      </FlexibleGrid>
     </Layout>
   )
 }

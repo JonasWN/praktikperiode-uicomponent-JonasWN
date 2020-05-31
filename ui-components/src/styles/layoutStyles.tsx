@@ -47,7 +47,11 @@ export const FlexibleGrid = styled.main`
   }
 `
 export const Container = styled.div`
-  max-width: 950px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 30px 0;
+`
+export const Title = styled.h1`
+  text-align: center;
+  margin: 10vh 0;
 `

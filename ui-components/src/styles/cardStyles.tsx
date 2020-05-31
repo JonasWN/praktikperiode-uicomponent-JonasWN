@@ -10,7 +10,7 @@ export const StyledCard = styled.article`
   .card-image {
     border-top-right-radius: ${(props) => props.theme.border.full};
     border-top-left-radius: ${(props) => props.theme.border.full};
-    filter: hue-rotate(200deg);
+    filter: hue-rotate(200deg) saturate(1.2);
   }
 
   div {

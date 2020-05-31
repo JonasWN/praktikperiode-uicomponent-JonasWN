@@ -22,6 +22,7 @@ const StyledPerk = styled.div`
     text-transform: uppercase;
   }
   p {
+    font-weight: 100;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
