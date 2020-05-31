@@ -25,7 +25,7 @@ const StyledNewSlide = styled.article`
     background-position: center;
     background-repeat: no-repeat;
     border-radius: ${(props) => props.theme.border.full};
-    filter: brightness(0.7) saturate(1.2);
+    filter: contrast(1.4) brightness(0.8) saturate(1.2);
   }
 
   header {
@@ -40,6 +40,7 @@ const StyledNewSlide = styled.article`
     }
     *:last-child {
       margin-left: auto;
+      width: 20px;
 
       &:hover {
         cursor: pointer;

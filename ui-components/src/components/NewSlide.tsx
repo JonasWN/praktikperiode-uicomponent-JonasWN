@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import StyledNewSlide from '../styles/newSlideStyles'
+import { Heart } from '@styled-icons/boxicons-solid/Heart'
 
 const interval: number = 5000
 const resetTimer: number = 0
@@ -32,7 +33,7 @@ const NewSlide = () => {
       <header>
         <div>Logo</div>
         <h3>{data.source}</h3>
-        <div>Like</div>
+        <Heart />
       </header>
       <section>
         <div>
@@ -62,14 +63,14 @@ const template = [
     title: 'title-2 loasdfo akosdfaodfkadf',
     description: 'description-2 foalfaosldf',
     cover:
-      'https://images.unsplash.com/photo-1496284045406-d3e0b918d7ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+      'https://images.unsplash.com/photo-1496284045406-d3e0b918d7ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80',
   },
   {
     source: 'source-3 lorem asfasdfa asdfa dasdf',
     title: 'title-3 loasdfo akosdfaodfkadf',
     description: 'description-3 foalfaosldf',
     cover:
-      'https://images.unsplash.com/uploads/14116941824817ba1f28e/78c8dff1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80',
+      'https://images.unsplash.com/photo-1534214526114-0ea4d47b04f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1950&q=80',
   },
 ]
 

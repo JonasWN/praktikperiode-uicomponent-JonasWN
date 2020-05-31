@@ -10,7 +10,7 @@ import { Title, FlexibleGrid } from '../styles/layoutStyles'
 const RootIndex = () => {
   return (
     <Layout>
-      <Title>React-Contentful Blog Components</Title>
+      <Title>Gatsby-Contentful Blog Components</Title>
       <FlexibleGrid>
         <Card />
         <Leisure />
