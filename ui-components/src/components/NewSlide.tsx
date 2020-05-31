@@ -31,7 +31,10 @@ const NewSlide = () => {
     <StyledNewSlide currentSlide={slideIndex} cover={data.cover}>
       <div className="hero-background"></div>
       <header>
-        <div>Logo</div>
+        <img
+          src="https://www.searchpng.com/wp-content/uploads/2018/12/Splash-Instagraam-Icon-Png-1024x1024.png"
+          alt="newslide-source-logo"
+        />
         <h3>{data.source}</h3>
         <Heart />
       </header>

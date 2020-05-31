@@ -33,6 +33,9 @@ const StyledNewSlide = styled.article`
     display: flex;
     align-items: center;
 
+    img {
+      width: 30px;
+    }
     h3 {
       font-size: 0.85em;
       font-weight: 400;
