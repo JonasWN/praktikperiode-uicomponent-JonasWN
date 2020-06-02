@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledLatest = styled.aside`
   grid-column-end: span 4;
-  grid-row-end: span 4;
+  grid-row-end: span 12;
   background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
@@ -57,24 +57,26 @@ export const StyledNewsArticle = styled.section`
     justify-content: space-between;
     padding: 6%;
     padding-right: 0;
-
-    h3 {
-      color: burlywood;
-      letter-spacing: 2px;
-      font-weight: 600;
-      font-size: 0.75em;
-      text-transform: uppercase;
-    }
-    p {
-      line-height: 1.2em;
-      font-weight: 100;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      -webkit-line-clamp: 3;
-    }
   }
+
   &:hover {
     cursor: pointer;
+  }
+`
+export const StyledParagraph = styled.div`
+  h3 {
+    color: burlywood;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+  p {
+    line-height: 1.2em;
+    font-weight: 100;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
   }
 `

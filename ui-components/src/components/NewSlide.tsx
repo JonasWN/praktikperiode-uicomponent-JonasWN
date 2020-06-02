@@ -29,7 +29,7 @@ const NewSlide = () => {
   return (
     //@ts-ignore
     <StyledNewSlide currentSlide={slideIndex} cover={data.cover}>
-      <div className="hero-background"></div>
+      <div className="hero-background" />
       <header>
         <img
           src="https://www.searchpng.com/wp-content/uploads/2018/12/Splash-Instagraam-Icon-Png-1024x1024.png"

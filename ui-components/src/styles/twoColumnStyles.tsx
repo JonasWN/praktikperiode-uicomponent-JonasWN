@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-const StyledTwoColumn = styled.section`
+const StyledTwoColumn = styled.article`
   display: grid;
+  align-items: center;
   grid-auto-flow: column;
   grid-column-gap: 30px;
   justify-content: space-between;

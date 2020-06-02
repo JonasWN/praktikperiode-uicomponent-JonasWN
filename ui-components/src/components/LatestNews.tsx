@@ -1,9 +1,18 @@
 import React from 'react'
-import { StyledLatest, StyledNewsArticle } from '../styles/lastestStyles'
+import {
+  StyledLatest,
+  StyledNewsArticle,
+  StyledParagraph,
+} from '../styles/lastestStyles'
 
 interface Iobject {
   thumb: string
   catagory: string
+  description: string
+}
+
+interface Iparagraph {
+  title: string
   description: string
 }
 
@@ -40,13 +49,17 @@ export const NewsArticle: React.FC<Iobject> = ({
   return (
     <StyledNewsArticle>
       <img src={thumb} alt="latest-news-thumb" />
-      <div>
-        <h3>{catagory}</h3>
-        <p>{description}</p>
-      </div>
+      <Paragraph title={catagory} description={description} />
     </StyledNewsArticle>
   )
 }
+
+export const Paragraph: React.FC<Iparagraph> = ({ title, description }) => (
+  <StyledParagraph>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </StyledParagraph>
+)
 
 const template = [
   {
