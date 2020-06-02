@@ -6,8 +6,9 @@ import Perk from '../components/Perk'
 import Collection from '../components/Collection'
 import NewSlide from '../components/NewSlide'
 import LatestNews from '../components/LatestNews'
-import { Title, FlexibleGrid } from '../styles/layoutStyles'
 import TwoColumn from '../components/TwoColumn'
+import TravelCard from '../components/TravelCard'
+import { Title, FlexibleGrid } from '../styles/layoutStyles'
 
 const RootIndex = () => {
   return (
@@ -26,6 +27,9 @@ const RootIndex = () => {
         <NewSlide />
         <LatestNews />
         <TwoColumn />
+        <TravelCard />
+        <TravelCard />
+        <TravelCard />
       </FlexibleGrid>
     </Layout>
   )

@@ -43,7 +43,9 @@ export const FlexibleGrid = styled.main`
   box-shadow: ${(props) => props.theme.shadow.sm};
 
   > * {
-    cursor: default;
+    &:hover {
+      cursor: default;
+    }
   }
 `
 export const Container = styled.div`
