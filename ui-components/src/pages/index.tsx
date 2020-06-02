@@ -7,6 +7,7 @@ import Collection from '../components/Collection'
 import NewSlide from '../components/NewSlide'
 import LatestNews from '../components/LatestNews'
 import { Title, FlexibleGrid } from '../styles/layoutStyles'
+import TwoColumn from '../components/TwoColumn'
 
 const RootIndex = () => {
   return (
@@ -24,6 +25,7 @@ const RootIndex = () => {
         <Collection />
         <NewSlide />
         <LatestNews />
+        <TwoColumn />
       </FlexibleGrid>
     </Layout>
   )

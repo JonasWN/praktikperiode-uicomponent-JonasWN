@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-const StyledLatest = styled.aside`
+export const StyledLatest = styled.aside`
   grid-column-end: span 4;
+  grid-row-end: span 4;
   background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
@@ -24,42 +25,6 @@ const StyledLatest = styled.aside`
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-row-gap: 20px;
     padding: 8%;
-
-    section {
-      display: flex;
-
-      img {
-        border-radius: ${(props) => props.theme.border.full};
-        filter: saturate(1.3) contrast(1.3);
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 6%;
-        padding-right: 0;
-
-        h3 {
-          color: burlywood;
-          letter-spacing: 2px;
-          font-weight: 600;
-          font-size: 0.75em;
-          text-transform: uppercase;
-        }
-        p {
-          line-height: 1.2em;
-          font-weight: 100;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          -webkit-line-clamp: 3;
-        }
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
   }
 
   footer {
@@ -78,4 +43,38 @@ const StyledLatest = styled.aside`
   }
 `
 
-export default StyledLatest
+export const StyledNewsArticle = styled.section`
+  display: flex;
+
+  img {
+    border-radius: ${(props) => props.theme.border.full};
+    filter: saturate(1.3) contrast(1.3);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6%;
+    padding-right: 0;
+
+    h3 {
+      color: burlywood;
+      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
+    p {
+      line-height: 1.2em;
+      font-weight: 100;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+`

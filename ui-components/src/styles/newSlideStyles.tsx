@@ -6,8 +6,10 @@ const StyledNewSlide = styled.article`
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  grid-row-end: span 2;
   grid-column-end: span 8;
   max-height: 430px;
+  min-height: 430px;
   background: ${(props) => props.theme.colors.darkFont};
   color: ${(props) => props.theme.colors.lightFont};
   padding: 5%;
@@ -54,7 +56,7 @@ const StyledNewSlide = styled.article`
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 40%;
     justify-content: space-between;
 
     div {

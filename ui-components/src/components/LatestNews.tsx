@@ -1,5 +1,5 @@
 import React from 'react'
-import StyledLatest from '../styles/lastestStyles'
+import { StyledLatest, StyledNewsArticle } from '../styles/lastestStyles'
 
 interface Iobject {
   thumb: string
@@ -14,13 +14,13 @@ const LatestNews: React.FC = () => {
         <h2>Latest News</h2>
       </header>
       <article>
-        {template.map((section: Iobject, index: number) => {
+        {template.map((article: Iobject, index: number) => {
           return (
-            <Section
+            <NewsArticle
               key={index}
-              thumb={section.thumb}
-              catagory={section.catagory}
-              description={section.description}
+              thumb={article.thumb}
+              catagory={article.catagory}
+              description={article.description}
             />
           )
         })}
@@ -32,15 +32,19 @@ const LatestNews: React.FC = () => {
   )
 }
 
-const Section: React.FC<Iobject> = ({ thumb, catagory, description }) => {
+export const NewsArticle: React.FC<Iobject> = ({
+  thumb,
+  catagory,
+  description,
+}) => {
   return (
-    <section>
+    <StyledNewsArticle>
       <img src={thumb} alt="latest-news-thumb" />
       <div>
         <h3>{catagory}</h3>
         <p>{description}</p>
       </div>
-    </section>
+    </StyledNewsArticle>
   )
 }
 
