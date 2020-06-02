@@ -4,6 +4,7 @@ export const Theme = {
     lightFont: '#f1f7fd',
     componentBG: '#ecf5fe',
     gradientBlue: 'linear-gradient(#166bd4,#259bff)',
+    gradientGreen: 'linear-gradient(#00f451,#35ffe3)',
   },
   shadow: {
     sm: '6px 4px 29px 1px rgba(212, 211, 211, 0.85)',
