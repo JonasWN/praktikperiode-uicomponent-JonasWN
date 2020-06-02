@@ -7,9 +7,9 @@ const StyledNewSlide = styled.article`
   justify-content: space-between;
   position: relative;
   grid-column-end: span 8;
+  max-height: 430px;
   background: ${(props) => props.theme.colors.darkFont};
   color: ${(props) => props.theme.colors.lightFont};
-  height: 475px;
   padding: 5%;
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
