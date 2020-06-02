@@ -35,3 +35,15 @@ export const StyledCard = styled.article`
     }
   }
 `
+export const StyledParagraph = styled.section`
+  h2 {
+    text-transform: uppercase;
+  }
+  p {
+    font-weight: 100;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+  }
+`
