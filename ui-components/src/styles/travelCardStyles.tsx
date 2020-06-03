@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 const StyledTravelCard = styled.article`
+    display: flex;
+    align-items: center;
     position: relative;
     grid-column-end: span 4;
-    padding: 10% 8%;
+    padding: 0 10%;
     background: ${(props) => props.theme.colors.componentBG};
     border-radius: ${(props) => props.theme.border.full};
     box-shadow: ${(props) => props.theme.shadow.sm};
