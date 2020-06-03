@@ -11,6 +11,7 @@ import TravelCard from '../components/TravelCard'
 import NewsDigest from '../components/NewsDigest'
 import NewsBlock from '../components/NewsBlock'
 import BookMark from '../components/BookMark'
+import CatagoryLogo from '../components/CatagoryLogo'
 import { Title, FlexibleGrid } from '../styles/layoutStyles'
 
 const RootIndex = () => {
@@ -37,6 +38,9 @@ const RootIndex = () => {
         <NewsBlock />
         <TravelCard />
         <BookMark />
+        <NewsBlock />
+        <CatagoryLogo />
+        <CatagoryLogo />
       </FlexibleGrid>
     </Layout>
   )

@@ -6,13 +6,12 @@ const StyledBookMark = styled.article`
   flex-direction: column;
   justify-content: space-between;
   padding: 8%;
+  grid-row-end: span 3;
   grid-column-end: span 4;
-  grid-row-end: span 9;
   color: ${(props) => props.theme.colors.darkFont};
   background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
-  height: 350px;
 
   .hero-background {
     position: absolute;

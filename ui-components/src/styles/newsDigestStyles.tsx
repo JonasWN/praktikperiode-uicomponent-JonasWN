@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledNewsDigest = styled.article`
   grid-column-end: span 4;
-  grid-row-end: span 12;
+  grid-row-end: span 6;
   background: ${(props) => props.theme.colors.componentBG};
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};

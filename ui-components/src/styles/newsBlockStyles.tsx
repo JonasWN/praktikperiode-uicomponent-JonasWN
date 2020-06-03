@@ -4,9 +4,9 @@ const StyledNewsBlock = styled.article`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   grid-column-end: span 4;
-  grid-row-end: span 4;
+  grid-row-end: span 3;
   padding: 15% 10%;
   color: ${(props) => props.theme.colors.darkFont};
   background: ${(props) => props.theme.colors.componentBG};
