@@ -10,6 +10,7 @@ import TwoColumn from '../components/TwoColumn'
 import TravelCard from '../components/TravelCard'
 import NewsDigest from '../components/NewsDigest'
 import NewsBlock from '../components/NewsBlock'
+import BookMark from '../components/BookMark'
 import { Title, FlexibleGrid } from '../styles/layoutStyles'
 
 const RootIndex = () => {
@@ -35,6 +36,7 @@ const RootIndex = () => {
         <NewsDigest />
         <NewsBlock />
         <TravelCard />
+        <BookMark />
       </FlexibleGrid>
     </Layout>
   )
