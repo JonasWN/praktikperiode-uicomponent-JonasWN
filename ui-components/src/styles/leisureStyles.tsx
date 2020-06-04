@@ -12,6 +12,7 @@ const StyledLeisure = styled.section`
   img {
     border-radius: ${(props) => props.theme.border.full};
     box-shadow: ${(props) => props.theme.shadow.img};
+    object-fit: fill;
   }
 
   .large-photo {

@@ -54,21 +54,21 @@ const NewSlide = () => {
 
 const template = [
   {
-    source: 'source-1 lorem asfasdfa asdfa dasdf',
+    source: 'The New York Times',
     title: 'title-1 loasdfo akosdfaodfkadf',
     description: 'description-1 foalfaosldf',
     cover:
       'https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
   },
   {
-    source: 'source-2 lorem asfasdfa asdfa dasdf',
+    source: 'The New York Times',
     title: 'title-2 loasdfo akosdfaodfkadf',
     description: 'description-2 foalfaosldf',
     cover:
       'https://images.unsplash.com/photo-1496284045406-d3e0b918d7ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80',
   },
   {
-    source: 'source-3 lorem asfasdfa asdfa dasdf',
+    source: 'The New York Times',
     title: 'title-3 loasdfo akosdfaodfkadf',
     description: 'description-3 foalfaosldf',
     cover:
