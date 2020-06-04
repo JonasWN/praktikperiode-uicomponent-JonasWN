@@ -14,6 +14,10 @@ const StyledCollection = styled.article`
     img {
       border-top-right-radius: ${(props) => props.theme.border.full};
       border-top-left-radius: ${(props) => props.theme.border.full};
+      height: 200px;
+      width: 100%;
+      filter: brightness(0.9) saturate(1.1) contrast(1.2);
+      object-fit: cover;
     }
     figcaption {
       position: absolute;
@@ -40,6 +44,7 @@ const StyledCollection = styled.article`
       height: 55px;
       width: 55px;
       border-radius: ${(props) => props.theme.border.circle};
+      object-fit: cover;
     }
     h3 {
       font-weight: 500;
