@@ -1,41 +1,81 @@
-import React from 'react'
+import React, { useState } from 'react'
 import StyledLeisure from '../styles/leisureStyles'
+import Img from 'gatsby-image'
+import { graphql, useStaticQuery } from 'gatsby'
+
+interface Ileisure {
+  title: string
+  description: string | any
+  gallery: Object[]
+}
+
+interface Object {
+  file: {
+    url: string
+  }
+}
 
 const Leisure = () => {
+  const { allContentfulLeisure } = useStaticQuery(
+    graphql`
+      query {
+        allContentfulLeisure {
+          nodes {
+            title
+            description {
+              description
+            }
+            gallery {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  const [largePhoto, setLargePhoto] = useState(
+    allContentfulLeisure.nodes[0].gallery[0].file.url
+  )
+
+  const changePhoto = (index: number, e: any) => {
+    const newPhoto = e.target.src
+    if (largePhoto !== newPhoto) {
+      e.target.src = largePhoto
+      setLargePhoto(newPhoto)
+    }
+  }
   return (
-    <StyledLeisure>
-      <img
-        src="https://dummyimage.com/200x400/2c3e50/f2f2f7.jpg&text=Placeholder"
-        alt="leisure-gallery"
-      />
-      <article>
-        <button>Leisure</button>
-        <h2>
-          <span> title</span>
-          <span> section</span>
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor
-          doloremque ullam voluptatem tempora iure laborum totam labore ratione
-          fuga. Voluptate, recusandae. Ipsam minima odit architecto sit vitae
-          asperiores atque?
-        </p>
-        <div>
-          <img
-            src="https://dummyimage.com/100x100/2c3e50/f2f2f7.jpg&text=Placeholder"
-            alt="leisure-gallery"
-          />
-          <img
-            src="https://dummyimage.com/100x100/2c3e50/f2f2f7.jpg&text=Placeholder"
-            alt="leisure-gallery"
-          />
-          <img
-            src="https://dummyimage.com/100x100/2c3e50/f2f2f7.jpg&text=Placeholder"
-            alt="leisure-gallery"
-          />
-        </div>
-      </article>
-    </StyledLeisure>
+    <>
+      {allContentfulLeisure.nodes.map((leisure: Ileisure, index: number) => (
+        <StyledLeisure key={index}>
+          <img src={largePhoto} alt="leisure-gallery" className="large-photo" />
+          <article>
+            <button>Leisure</button>
+            <h2>{leisure.title}</h2>
+            <p>{leisure.description.description}</p>
+            <div>
+              <img
+                onClick={(e) => changePhoto(1, e)}
+                src={leisure.gallery[1].file.url}
+                alt="small-gallery-photo"
+              />
+              <img
+                onClick={(e) => changePhoto(2, e)}
+                src={leisure.gallery[2].file.url}
+                alt="small-gallery-photo"
+              />
+              <img
+                onClick={(e) => changePhoto(3, e)}
+                src={leisure.gallery[3].file.url}
+                alt="small-gallery-photo"
+              />
+            </div>
+          </article>
+        </StyledLeisure>
+      ))}
+    </>
   )
 }
 

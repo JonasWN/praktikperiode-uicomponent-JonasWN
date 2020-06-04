@@ -14,11 +14,16 @@ const StyledLeisure = styled.section`
     box-shadow: ${(props) => props.theme.shadow.img};
   }
 
+  .large-photo {
+    width: 50%;
+  }
+
   article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 5%;
+    width: 50%;
 
     button {
       align-self: flex-end;
@@ -55,6 +60,7 @@ const StyledLeisure = styled.section`
     div {
       display: flex;
       justify-content: space-between;
+      height: 80px;
       width: 100%;
 
       img {
