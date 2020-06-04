@@ -22,9 +22,6 @@ const RootIndex = () => {
         <Card />
         <Leisure />
         <Perk />
-        <Perk />
-        <Perk />
-        <Perk />
         <Collection />
         <Collection />
         <Collection />
