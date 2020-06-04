@@ -11,12 +11,12 @@ const Collection = () => {
             index
             title
             name
-            background {
+            avatar {
               file {
                 url
               }
             }
-            avatar {
+            background {
               file {
                 url
               }

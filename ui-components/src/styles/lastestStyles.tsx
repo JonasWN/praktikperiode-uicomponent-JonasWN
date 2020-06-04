@@ -49,6 +49,9 @@ export const StyledNewsArticle = styled.section`
   img {
     border-radius: ${(props) => props.theme.border.full};
     filter: saturate(1.3) contrast(1.3);
+    width: 30%;
+    height: 80px;
+    object-fit: cover;
   }
 
   div {

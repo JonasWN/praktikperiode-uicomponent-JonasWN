@@ -4,6 +4,7 @@ import {
   StyledNewsArticle,
   StyledParagraph,
 } from '../styles/lastestStyles'
+import { useStaticQuery, graphql } from 'gatsby'
 
 interface Iobject {
   thumb: string
@@ -17,17 +18,36 @@ interface Iparagraph {
 }
 
 const LatestNews: React.FC = () => {
+  const { allContentfulLatest } = useStaticQuery(
+    graphql`
+      query {
+        allContentfulLatest {
+          nodes {
+            catagory
+            description
+            thumbnail {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const LatestList = allContentfulLatest.nodes
   return (
     <StyledLatest>
       <header>
         <h2>Latest News</h2>
       </header>
       <article>
-        {template.map((article: Iobject, index: number) => {
+        {LatestList.map((article: any, index: number) => {
           return (
             <NewsArticle
               key={index}
-              thumb={article.thumb}
+              thumb={article.thumbnail.file.url}
               catagory={article.catagory}
               description={article.description}
             />
@@ -60,33 +80,5 @@ export const Paragraph: React.FC<Iparagraph> = ({ title, description }) => (
     <p>{description}</p>
   </StyledParagraph>
 )
-
-const template = [
-  {
-    thumb: 'https://dummyimage.com/120x120/2c3e50/f2f2f7.jpg&text=Placeholder',
-    catagory: 'Nature',
-    description: 'filter lorem text ipsum amet sit elit odio',
-  },
-  {
-    thumb: 'https://dummyimage.com/120x120/2c3e50/f2f2f7.jpg&text=Placeholder',
-    catagory: 'Nature',
-    description: 'filter lorem text ipsum amet sit elit odio',
-  },
-  {
-    thumb: 'https://dummyimage.com/120x120/2c3e50/f2f2f7.jpg&text=Placeholder',
-    catagory: 'Nature',
-    description: 'filter lorem text ipsum amet sit elit odio',
-  },
-  {
-    thumb: 'https://dummyimage.com/120x120/2c3e50/f2f2f7.jpg&text=Placeholder',
-    catagory: 'Nature',
-    description: 'filter lorem text ipsum amet sit elit odio',
-  },
-  {
-    thumb: 'https://dummyimage.com/120x120/2c3e50/f2f2f7.jpg&text=Placeholder',
-    catagory: 'Nature',
-    description: 'filter lorem text ipsum amet sit elit odio',
-  },
-]
 
 export default LatestNews
