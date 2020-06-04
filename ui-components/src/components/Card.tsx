@@ -36,6 +36,7 @@ const Card: React.FC = () => {
       }
     `
   )
+  console.log(allContentfulCard.nodes)
 
   return (
     <>
