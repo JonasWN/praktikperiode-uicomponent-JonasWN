@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import StyledLeisure from '../styles/leisureStyles'
-import Img from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 
 interface Ileisure {

@@ -18,15 +18,20 @@ const StyledPerk = styled.div`
     font-size: 3.25em;
   }
 
-  h3 {
-    text-transform: uppercase;
-  }
-  p {
-    font-weight: 100;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
+  article {
+    height: 50%;
+    margin-bottom: 10%;
+
+    h3 {
+      text-transform: uppercase;
+    }
+    p {
+      font-weight: 100;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+    }
   }
 `
 export default StyledPerk
