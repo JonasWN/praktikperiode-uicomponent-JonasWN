@@ -1,26 +1,53 @@
 import React from 'react'
 import StyledCollection from '../styles/collectionStyles'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const Collection = () => {
+  const { allContentfulCollection } = useStaticQuery(
+    graphql`
+      query {
+        allContentfulCollection {
+          nodes {
+            index
+            title
+            name
+            background {
+              file {
+                url
+              }
+            }
+            avatar {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  const collectionList = allContentfulCollection.nodes.reverse()
+
   return (
-    <StyledCollection>
-      <figure>
-        <img
-          src="https://dummyimage.com/600x400/2c3e50/f2f2f7.jpg&text=+"
-          alt="collection-hero"
-        />
-        <figcaption>Collection</figcaption>
-      </figure>
-      <div>
-        <img
-          src="https://dummyimage.com/600x400/ffe08a/f2f2f7.jpg&text=+"
-          alt="collection-hero"
-          className="avatar"
-        />
-        <h3>Heading</h3>
-        <p>Under-Heading</p>
-      </div>
-    </StyledCollection>
+    <>
+      {collectionList.map((collection: any, index: number) => (
+        <StyledCollection>
+          <figure>
+            <img src={collection.background.file.url} alt="collection-hero" />
+            <figcaption>Collection #{collection.index}</figcaption>
+          </figure>
+          <div>
+            <img
+              src={collection.avatar.file.url}
+              alt="collection-hero"
+              className="avatar"
+            />
+            <h3>{collection.title}</h3>
+            <p>by: {collection.name}</p>
+          </div>
+        </StyledCollection>
+      ))}
+    </>
   )
 }
 

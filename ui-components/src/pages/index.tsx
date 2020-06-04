@@ -23,8 +23,6 @@ const RootIndex = () => {
         <Leisure />
         <Perk />
         <Collection />
-        <Collection />
-        <Collection />
         <NewSlide />
         <LatestNews />
         <TwoColumn />
