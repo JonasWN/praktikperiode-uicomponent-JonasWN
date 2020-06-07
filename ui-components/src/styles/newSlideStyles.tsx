@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledNewSlide = styled.article`
+const StyledNewSlide = styled(motion.article)`
   position: relative;
   display: flex;
   flex-direction: column;

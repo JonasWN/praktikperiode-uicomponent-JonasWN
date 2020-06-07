@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledCollection = styled.article`
+const StyledCollection = styled(motion.article)`
   display: flex;
   flex-direction: column;
   height: 375px;

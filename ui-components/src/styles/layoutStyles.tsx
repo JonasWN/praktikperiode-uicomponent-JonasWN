@@ -32,6 +32,16 @@ export const gridSpecs = {
   },
 }
 
+export const containerVariants = {
+  hover: {
+    scale: 1.01,
+    boxShadow: '6px 4px 29px 1px rgba(180, 180, 180, 0.85)',
+  },
+  tap: {
+    scale: 0.99,
+  },
+}
+
 export const FlexibleGrid = styled.main`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -44,7 +54,7 @@ export const FlexibleGrid = styled.main`
 
   > * {
     &:hover {
-      cursor: default;
+      cursor: pointer;
     }
   }
 `

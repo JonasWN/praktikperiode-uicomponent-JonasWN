@@ -1,6 +1,7 @@
 import React from 'react'
 import StyledCollection from '../styles/collectionStyles'
 import { useStaticQuery, graphql } from 'gatsby'
+import { containerVariants } from '../styles/layoutStyles'
 
 const Collection = () => {
   const { allContentfulCollection } = useStaticQuery(
@@ -31,7 +32,12 @@ const Collection = () => {
   return (
     <>
       {collectionList.map((collection: any, index: number) => (
-        <StyledCollection>
+        <StyledCollection
+          variants={containerVariants}
+          whileHover="hover"
+          whileTap="tap"
+          key={index}
+        >
           <figure>
             <img src={collection.background.file.url} alt="collection-hero" />
             <figcaption>Collection #{collection.index}</figcaption>

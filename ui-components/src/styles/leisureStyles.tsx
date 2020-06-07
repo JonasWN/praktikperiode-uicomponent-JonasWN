@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledLeisure = styled.section`
+const StyledLeisure = styled(motion.section)`
   display: flex;
   grid-column-end: span 8;
   height: 420px;
@@ -13,6 +14,7 @@ const StyledLeisure = styled.section`
     border-radius: ${(props) => props.theme.border.full};
     box-shadow: ${(props) => props.theme.shadow.img};
     object-fit: fill;
+    filter: saturate(1.3) contrast(1.3);
   }
 
   .large-photo {
@@ -41,12 +43,11 @@ const StyledLeisure = styled.section`
       }
     }
 
-    h2 span {
-      display: block;
-      font-size: 1.25em;
+    h2 {
+      font-size: 2.4rem;
       font-weight: bold;
       text-transform: capitalize;
-      line-height: 1.2em;
+      line-height: 3rem;
     }
 
     p {

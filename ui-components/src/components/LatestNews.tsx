@@ -5,6 +5,7 @@ import {
   StyledParagraph,
 } from '../styles/lastestStyles'
 import { useStaticQuery, graphql } from 'gatsby'
+import { containerVariants } from '../styles/layoutStyles'
 
 interface Iobject {
   thumb: string
@@ -38,7 +39,11 @@ const LatestNews: React.FC = () => {
 
   const LatestList = allContentfulLatest.nodes
   return (
-    <StyledLatest>
+    <StyledLatest
+      variants={containerVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
       <header>
         <h2>Latest News</h2>
       </header>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { containerVariants } from '../styles/layoutStyles'
 import StyledNewSlide from '../styles/newSlideStyles'
 //@ts-ignore
 import nyTimes from '../assets/News_Logo.svg'
@@ -29,8 +30,14 @@ const NewSlide = () => {
   }, [slideIndex])
 
   return (
-    //@ts-ignore
-    <StyledNewSlide currentSlide={slideIndex} cover={data.cover}>
+    <StyledNewSlide
+      //@ts-ignore
+      currentSlide={slideIndex}
+      cover={data.cover}
+      variants={containerVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
       <div className="hero-background" />
       <header>
         <img src={nyTimes} alt="newslide-source-logo" />

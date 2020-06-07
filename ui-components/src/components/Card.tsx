@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import { StyledCard } from '../styles/cardStyles'
+import { containerVariants } from '../styles/layoutStyles'
+import Img from 'gatsby-image'
 
 interface Icard {
   catagory: string
@@ -40,7 +41,12 @@ const Card: React.FC = () => {
   return (
     <>
       {allContentfulCard.nodes.map((card: Icard) => (
-        <StyledCard key={card.title}>
+        <StyledCard
+          key={card.title}
+          variants={containerVariants}
+          whileHover="hover"
+          whileTap="tap"
+        >
           <Img fluid={card.image.fluid} className="card-image" />
           <div>
             <h3>{card.catagory}</h3>

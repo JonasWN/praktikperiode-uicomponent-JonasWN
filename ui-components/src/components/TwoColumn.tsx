@@ -1,6 +1,7 @@
 import React from 'react'
 import StyledTwoColumn from '../styles/twoColumnStyles'
 import { NewsArticle } from './LatestNews'
+import { containerVariants } from '../styles/layoutStyles'
 
 interface Iobject {
   thumb: string
@@ -10,7 +11,11 @@ interface Iobject {
 
 const TwoColumn = () => {
   return (
-    <StyledTwoColumn>
+    <StyledTwoColumn
+      variants={containerVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
       {template.map((article: Iobject, index: number) => (
         <NewsArticle
           key={index}

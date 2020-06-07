@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledTwoColumn = styled.article`
+const StyledTwoColumn = styled(motion.article)`
   display: grid;
   align-items: center;
   grid-auto-flow: column;

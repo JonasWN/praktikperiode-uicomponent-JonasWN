@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledTravelCard = styled.article`
+const StyledTravelCard = styled(motion.article)`
     display: flex;
     align-items: center;
     position: relative;

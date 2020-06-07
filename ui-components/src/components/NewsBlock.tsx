@@ -2,10 +2,15 @@ import React from 'react'
 import StyledNewsBlock from '../styles/newsBlockStyles'
 //@ts-ignore
 import nyTimes from '../assets/News_Logo.svg'
+import { containerVariants } from '../styles/layoutStyles'
 
 const NewsBlock = () => {
   return (
-    <StyledNewsBlock>
+    <StyledNewsBlock
+      variants={containerVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
       <div className="hero-background" />
       <header>
         <img src={nyTimes} alt="news-block-source-logo" />

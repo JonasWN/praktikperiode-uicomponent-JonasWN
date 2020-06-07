@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import StyledLeisure from '../styles/leisureStyles'
 import { graphql, useStaticQuery } from 'gatsby'
+import { containerVariants } from '../styles/layoutStyles'
 
 interface Ileisure {
   title: string
@@ -48,7 +49,12 @@ const Leisure = () => {
   return (
     <>
       {allContentfulLeisure.nodes.map((leisure: Ileisure, index: number) => (
-        <StyledLeisure key={index}>
+        <StyledLeisure
+          key={index}
+          variants={containerVariants}
+          whileHover="hover"
+          whileTap="tap"
+        >
           <img src={largePhoto} alt="leisure-gallery" className="large-photo" />
           <article>
             <button>Leisure</button>

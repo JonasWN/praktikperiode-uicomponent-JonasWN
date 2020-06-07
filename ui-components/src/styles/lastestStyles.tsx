@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledLatest = styled.aside`
+export const StyledLatest = styled(motion.aside)`
   grid-column-end: span 4;
   grid-row-end: span 12;
   background: ${(props) => props.theme.colors.componentBG};
@@ -13,7 +14,7 @@ export const StyledLatest = styled.aside`
     align-items: center;
     height: 60px;
     color: ${(props) => props.theme.colors.lightFont};
-    background: ${(props) => props.theme.colors.gradientBlue};
+    background: linear-gradient(45deg, #a600fb, #25afff);
     border-top-right-radius: ${(props) => props.theme.border.full};
     border-top-left-radius: ${(props) => props.theme.border.full};
     text-transform: uppercase;
@@ -58,7 +59,7 @@ export const StyledNewsArticle = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 6%;
+    padding: 3% 6%;
     padding-right: 0;
   }
 

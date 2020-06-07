@@ -2,6 +2,7 @@ import React from 'react'
 import StyledNewsDigest, {
   StyledOrderedArticle,
 } from '../styles/newsDigestStyles'
+import { containerVariants } from '../styles/layoutStyles'
 
 interface IOrderProps {
   number?: number
@@ -12,7 +13,11 @@ interface IOrderProps {
 
 const NewsDigest = () => {
   return (
-    <StyledNewsDigest>
+    <StyledNewsDigest
+      variants={containerVariants}
+      whileHover="hover"
+      whileTap="tap"
+    >
       <header>
         <h3>News Digest</h3>
       </header>

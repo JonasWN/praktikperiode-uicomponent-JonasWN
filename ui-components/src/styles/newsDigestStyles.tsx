@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledNewsDigest = styled.article`
+const StyledNewsDigest = styled(motion.article)`
   grid-column-end: span 4;
   grid-row-end: span 6;
   background: ${(props) => props.theme.colors.componentBG};
@@ -13,7 +14,7 @@ const StyledNewsDigest = styled.article`
     align-items: center;
     height: 60px;
     color: ${(props) => props.theme.colors.lightFont};
-    background: ${(props) => props.theme.colors.gradientBlue};
+    background: linear-gradient(45deg, #a600fb, #25afff);
     border-top-right-radius: ${(props) => props.theme.border.full};
     border-top-left-radius: ${(props) => props.theme.border.full};
     text-transform: uppercase;

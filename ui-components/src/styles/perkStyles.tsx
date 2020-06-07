@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledPerk = styled.div`
+const StyledPerk = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,6 +22,9 @@ const StyledPerk = styled.div`
   article {
     height: 50%;
     margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     h3 {
       text-transform: uppercase;

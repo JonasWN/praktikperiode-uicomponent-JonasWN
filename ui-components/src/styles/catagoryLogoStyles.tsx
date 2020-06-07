@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const StyledCatagoryLogo = styled.article`
+const StyledCatagoryLogo = styled(motion.article)`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -9,7 +10,7 @@ const StyledCatagoryLogo = styled.article`
   grid-row-end: span 1;
   padding: 10%;
   color: ${(props) => props.theme.colors.lightFont};
-  background: ${(props) => props.theme.colors.gradientGreen};
+  background: linear-gradient(45deg, #17c8da, #c914f7);
   border-radius: ${(props) => props.theme.border.full};
   box-shadow: ${(props) => props.theme.shadow.sm};
   border: 1px solid #82858b;

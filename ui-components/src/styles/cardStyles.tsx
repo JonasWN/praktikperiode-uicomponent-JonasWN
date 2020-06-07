@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const StyledCard = styled.article`
+export const StyledCard = styled(motion.article)`
   height: 420px;
   grid-column-end: span 4;
   background: ${(props) => props.theme.colors.componentBG};
